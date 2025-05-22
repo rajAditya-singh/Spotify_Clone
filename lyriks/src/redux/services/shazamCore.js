@@ -2,7 +2,7 @@ const options = {
   method: 'GET',
   headers: {
     'x-rapidapi-key': 'f8a723122fmshdc5c3d67040495fp125fd1jsn1dc864ba80be',
-    'x-rapidapi-host': 'shazam-core.p.rapidapi.com'
+    'x-rapidapi-host': 'shazam-core.p.rapidapi.com',
   },
 };
 
