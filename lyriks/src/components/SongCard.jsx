@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable react/self-closing-comp */
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -7,10 +9,10 @@ import { playPause, setActiveSong } from '../redux/features/playerSlice';
 
 const SongCard = ({ song, i }) => {
   const dispatch = useDispatch();
-  const activeSong = 'Test'; 
+  const activeSong = 'Test';
 
   const { attributes } = song;
-  if (!attributes) return null; 
+  if (!attributes) return null;
 
   const { name, artistName, artwork } = attributes;
 
@@ -26,6 +28,19 @@ const SongCard = ({ song, i }) => {
           className="w-full h-full rounded-lg"
         />
       </div>
+
+      {/* <div className="mt-4 flex flex-col">
+        <p className="font-semibold text-lg text-white truncate">
+          <Link to={`/songs/${song.id}`}>
+            {song.attributes?.name || 'Unknown Title'}
+          </Link>
+        </p>
+        <p className="text-sm truncate text-gray-300 mt-1">
+          <Link to={song.relationships?.artists?.data?.[0]?.id ? `/artists/${song.relationships.artists.data[0].id}` : '/top-artists'}>
+            {song.attributes?.artistName || 'Unknown Artist'}
+          </Link>
+        </p>
+      </div> */}
     </div>
   );
 };
