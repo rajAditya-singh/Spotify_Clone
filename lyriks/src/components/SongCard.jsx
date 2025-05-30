@@ -29,7 +29,7 @@ const SongCard = ({ song, i }) => {
         />
       </div>
 
-      {/* <div className="mt-4 flex flex-col">
+      <div className="mt-4 flex flex-col">
         <p className="font-semibold text-lg text-white truncate">
           <Link to={`/songs/${song.id}`}>
             {song.attributes?.name || 'Unknown Title'}
@@ -40,7 +40,7 @@ const SongCard = ({ song, i }) => {
             {song.attributes?.artistName || 'Unknown Artist'}
           </Link>
         </p>
-      </div> */}
+      </div>
     </div>
   );
 };
