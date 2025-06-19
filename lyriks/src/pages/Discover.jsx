@@ -38,7 +38,7 @@ const Discover = () => {
             i={i}
             isPlaying={isPlaying}
             activeSong={activeSong}
-            data={data}
+            data={data} // ✅ This line is critical!
           />
         ))}
       </div>
